@@ -1,0 +1,19 @@
+#:schema node_modules/wrangler/config-schema.json
+name = "tiktok"
+main = "src/index.ts"
+compatibility_date = "2024-12-30"
+
+[observability]
+enabled = true
+
+[vars]
+MY_VARIABLE = "production_value"
+#https://rapidapi.com/Lundehund/api/tiktok-api23
+
+URL="https://tiktok-api23.p.rapidapi.com"
+API_KEY="9e2febd4demsh8e7fd9c0253fa82p197954jsnfd3d14a6c70b"
+HOST="tiktok-api23.p.rapidapi.com"
+
+BASIC_AUTH_USERNAME="admin"
+BASIC_AUTH_PASSWORD="esGdZvlAugQoDaMHKJSzrpYnELuESi"
+BASIC_AUTH_TOKEN="YWRtaW46ZXNHZFp2bEF1Z1FvRGFNSEtKU3pycFluRUx1RVNp"
