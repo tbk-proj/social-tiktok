@@ -4,7 +4,8 @@ on:
   push:
     branches:
       - sandbox
-
+    paths-ignore:
+    - ".github/**"
 jobs:
   deploy:
     runs-on: ubuntu-latest
