@@ -11,7 +11,7 @@ MY_VARIABLE = "production_value"
 #https://rapidapi.com/Lundehund/api/tiktok-api23
 
 URL="https://tiktok-api23.p.rapidapi.com"
-API_KEY="9e2febd4demsh8e7fd9c0253fa82p197954jsnfd3d14a6c70b"
+API_KEY="0014c60236mshe134e97474e6bf0p169e1ejsna7035bac56d3"
 HOST="tiktok-api23.p.rapidapi.com"
 
 BASIC_AUTH_USERNAME="admin"
