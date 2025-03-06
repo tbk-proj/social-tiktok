@@ -9,15 +9,15 @@ export class GetCommentsOfPost extends OpenAPIRoute {
     request: {
       query: z.object({
         videoId: Str({
-          description: "Video ID",
+          description: "Video ID"
         }),
         count: Str({
-          default: "50",
+          default: "50"
         }),
         cursor: Str({
-          default: 0,
-        }),
-      }),
+          default: "0"
+        })
+      })
     },
     responses: {
       "200": {
@@ -28,11 +28,11 @@ export class GetCommentsOfPost extends OpenAPIRoute {
               series: z.object({
                 success: Bool(),
                 data: any(),
-                message: Str(),
-              }),
-            }),
-          },
-        },
+                message: Str()
+              })
+            })
+          }
+        }
       },
       "404": {
         description: "Get comments of post not found",
@@ -41,20 +41,20 @@ export class GetCommentsOfPost extends OpenAPIRoute {
             schema: z.object({
               series: z.object({
                 success: Bool(),
-                error: Str(),
-              }),
-            }),
-          },
-        },
-      },
-    },
+                error: Str()
+              })
+            })
+          }
+        }
+      }
+    }
   };
 
   async handle(c) {
     const result = {
       success: false,
       data: undefined,
-      message: undefined,
+      message: undefined
     };
     try {
       const data = await this.getValidatedData<typeof this.schema>();
@@ -65,12 +65,12 @@ export class GetCommentsOfPost extends OpenAPIRoute {
         params: {
           videoId,
           count,
-          cursor,
+          cursor
         },
         headers: {
           "x-rapidapi-key": c.env.API_KEY,
-          "x-rapidapi-host": c.env.HOST,
-        },
+          "x-rapidapi-host": c.env.HOST
+        }
       };
       const response = await axios.request(options);
       if (response?.data) {
